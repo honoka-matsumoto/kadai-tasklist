@@ -1,5 +1,11 @@
+<% if logged_in? %>
+<p>ログイン完了のユーザー<%= current_user.name %></p>
+<% else %>
 <div class="center jumbotron">
   <div class="text-center">
     <h1>Tasklist</h1>
+    <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
+    <%= link_to 'log in now!', login_path, class: 'btn btn-lg btn-primary' %>
   </div>
 </div>
+<% end %>
